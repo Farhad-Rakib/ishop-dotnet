@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  yarpapigw:
+    image: ${DOCKER_REGISTRY-}yarpapigw
+    build:
+      context: .
+      dockerfile: Gateway/YarpApiGW/Dockerfile
+
+  command.api:
+    image: ${DOCKER_REGISTRY-}commandapi
+    build:
+      context: .
+      dockerfile: Services/Product/Product.Command/Command.API/Dockerfile
+
+
+  query.api:
+    image: ${DOCKER_REGISTRY-}queryapi
+    build:
+      context: .
+      dockerfile: Services/Product/Product.Query/Query.API/Dockerfile
+
+
+  auth.api:
+    image: ${DOCKER_REGISTRY-}authapi
+    build:
+      context: .
+      dockerfile: Services/Authentication/Auth.API/Dockerfile
+
