@@ -10,4 +10,10 @@
     <ProjectReference Include="..\Query.Core\Core.Application\Core.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DependencyInjection\" />
+    <Folder Include="Persistence\Contexts\" />
+    <Folder Include="Persistence\Repositories\" />
+  </ItemGroup>
+
 </Project>
